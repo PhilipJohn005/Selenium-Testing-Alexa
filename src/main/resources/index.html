@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium Alexa Demo</title>
+    
+    <!-- Link the script properly here -->
+    <script src="js/speechScript.js"></script>
+</head>
+<body>
+    <button id="start-button">START</button>
+
+    <script>
+        // Ensure init is called to load SpeechRecognition
+        init();
+
+        // Handle the button click
+        document.getElementById("start-button").addEventListener("click", function () {
+            console.log("START button clicked.");
+            startListening(); // Call defined function
+            speak("Hello! I am Alexa. How can I assist you?");
+        });
+    </script>
+</body>
+</html>
